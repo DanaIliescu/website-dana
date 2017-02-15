@@ -4,17 +4,41 @@
     box-sizing: border-box;
 }
 
+body {
+	font-family: 'Mada', sans-serif;
+}
+
+#page_container {
+    opacity: 1;
+    transition: 2s opacity;
+}
+
+#page_container.fade-out, #hello_title.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+#page_container.blured {
+  opacity: .7;
+}
+
+
 #overview_section {
     display: flex;
 	justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+    height: 100vh;
 }
 
-#hello {
+#hello_title {
+	width: inherit;
 	font-size: 30vw;
+	font-weight: 900;
+   	color: white;   /*Fallback: assume this color ON TOP of image */
+   	background: url(img/hello-slide-1.jpeg) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #summary {
@@ -25,7 +49,79 @@
 
 #explore {
 	font-size: 4vw;
-	position: absolute;
-    bottom: 0;
-    margin-bottom: 5vh;
+	margin-top: 1.3em;
 }
+
+.bottomaligned {
+	position:absolute; 
+	bottom:0;  
+	margin-bottom:7px;
+}
+
+/*.hello-slides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index 1;
+	transition: opacity 1000ms ease-out 0ms;
+}
+
+.hello-slides-img {
+    position: static;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    opacity: 1;
+    display: block;
+    visibility: hidden;
+}
+
+position: relative to the hello div; (display: block) 
+HELLO slides
+.noyoutube .helloslides { opacity: 1; }
+.helloslides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	poition: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index 1;
+	transition: opacity 1000ms ease-out 0ms;
+}
+
+
+.hello-slides-img {
+    background-image: url(http://www.thelondonloom.com/wp-content/uploads/2016/12/DSC_0389-1692x1125.jpeg);
+    position: static;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    opacity: 1;
+    display: block;
+    visibility: hidden;
+}
+1483368112index.css:2115
+.helloslide__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+*/
