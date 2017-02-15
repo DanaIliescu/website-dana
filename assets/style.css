@@ -1,0 +1,31 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#overview_section {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+#hello {
+	font-size: 30vw;
+}
+
+#summary {
+	text-align: center;
+	font-size: 4.5vw;
+	max-width: 78%;
+}
+
+#explore {
+	font-size: 4vw;
+	position: absolute;
+    bottom: 0;
+    margin-bottom: 5vh;
+}
