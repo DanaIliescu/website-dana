@@ -23,8 +23,6 @@ function smoothScroll() {
 }
 
 //STORE PICTURES IN ARRAY
-//SET BACKGROUND-IMAGE FROM HERE, FROM INSIDE A LOOP
-//SET TIME OUT TO THE METHOD TO 2 3 SECONDS
 var imgArray = [];
 function loadImages(){
 	var folder = "assets/img/";
@@ -42,12 +40,12 @@ function loadImages(){
 	console.log(imgArray);
 }
 
-// change the image every 3 seconds            
+// change the image every 2 seconds            
 var i = 0; 
 function myLoop () {          
    setInterval(function () {   
       $('#hello_title').css({
-			'background': 'url(assets/img/' + imgArray[i] + ') no-repeat',
+			'background': 'url(assets/img/' + imgArray[i] + ')',
 			'-webkit-background-clip' : 'text',
 			'-webkit-text-fill-color' : 'transparent'
 		});
