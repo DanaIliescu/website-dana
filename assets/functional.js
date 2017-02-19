@@ -43,7 +43,7 @@ function loadImages(){
 // change the image every 2 seconds            
 var i = 0; 
 function myLoop () {          
-   setInterval(function () {   
+   setInterval(function () {  
       $('#hello_title').css({
 			'background': 'url(assets/img/' + imgArray[i] + ')',
 			'-webkit-background-clip' : 'text',

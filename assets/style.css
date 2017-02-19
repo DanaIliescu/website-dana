@@ -33,7 +33,7 @@ body {
 
 #hello_title {
 	width: inherit;
-	font-size: 30vw;
+	font-size: 22em;
 	font-weight: 900;
    	color: white;   /*Fallback: assume this color ON TOP of image */
     -webkit-background-clip: text;
@@ -60,78 +60,48 @@ body {
   and (min-device-width: 320px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+    #hello_title {
+      font-size: 15em;
+    }
+
+    #summary {
+      font-size: 3vw;
+    }
+
     #explore {
         position: static;
+        font-size: 2.5vw;
     }
 }
 
+/*Common desktops, landscape*/
+@media only screen 
+  and (min-device-width: 800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #summary {
+      font-size: 2.5vw;
+    }
 
-
-
-/*.hello-slides {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	z-index 1;
-	transition: opacity 1000ms ease-out 0ms;
+    #explore {
+        position: static;
+        font-size: 2.5vw;
+    }
 }
 
-.hello-slides-img {
+/*Wide screens*/
+@media only screen 
+  and (min-device-width: 1268px)  {
+    #hello_title {
+      font-size: 25vw;
+    }
+
+    #summary {
+      font-size: 2.5vw;
+    }
+
+    #explore {
     position: static;
-    top: 0px;
-    left: 0px;
-    z-index: 100;
-    opacity: 1;
-    display: block;
-    visibility: hidden;
+    font-size: 2.5vw;
+    }
 }
-
-position: relative to the hello div; (display: block) 
-HELLO slides
-.noyoutube .helloslides { opacity: 1; }
-.helloslides {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: block;
-	poition: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	z-index 1;
-	transition: opacity 1000ms ease-out 0ms;
-}
-
-
-.hello-slides-img {
-    background-image: url(http://www.thelondonloom.com/wp-content/uploads/2016/12/DSC_0389-1692x1125.jpeg);
-    position: static;
-    top: 0px;
-    left: 0px;
-    z-index: 100;
-    opacity: 1;
-    display: block;
-    visibility: hidden;
-}
-1483368112index.css:2115
-.helloslide__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-
-*/
