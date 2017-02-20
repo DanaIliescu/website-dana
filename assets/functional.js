@@ -47,6 +47,7 @@ function myLoop () {
    setInterval(function () {  
       $('#hello_title').css({
 			'background': 'url(assets/img/' + imgArray[i] + ') no-repeat',
+      'background-size' : 'cover',
 			'-webkit-background-clip' : 'text',
 			'-webkit-text-fill-color' : 'transparent'
 		});
