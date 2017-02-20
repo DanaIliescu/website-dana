@@ -2,12 +2,13 @@ window.onload = function() {
   showContent();
   smoothScroll();
   loadImages();
+  myLoop();
 };
 
 //fade in the home page
 function showContent() {
   $('#page_container').removeClass('fade-out'); //fade-in the body
-  setTimeout(function() {$('#hello').removeClass('fade-out');}, 500); //fade-in the title(slow)
+  setTimeout(function() {$('#hello_title').removeClass('fade-out');}, 500); //fade-in the title(slow)
 }
 
 //add smooth scroll effect when jumping to sections
@@ -45,7 +46,7 @@ var i = 0;
 function myLoop () {          
    setInterval(function () {  
       $('#hello_title').css({
-			'background': 'url(assets/img/' + imgArray[i] + ')',
+			'background': 'url(assets/img/' + imgArray[i] + ') no-repeat',
 			'-webkit-background-clip' : 'text',
 			'-webkit-text-fill-color' : 'transparent'
 		});
@@ -55,8 +56,5 @@ function myLoop () {
       	} 
    	}, 2000);
 }
-
-myLoop();
-
 
 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');

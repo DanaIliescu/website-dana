@@ -1,7 +1,7 @@
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,13 +9,13 @@ body {
 }
 
 #page_container {
-    opacity: 1;
-    transition: 2s opacity;
+  opacity: 1;
+  transition: 2s opacity;
 }
 
 #page_container.fade-out, #hello_title.fade-out {
-    opacity: 0;
-    transition: none;
+  opacity: 0;
+  transition: none;
 }
 
 #page_container.blured {
@@ -24,20 +24,24 @@ body {
 
 
 #overview_section {
-    display: flex;
-	justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #hello_title {
 	width: inherit;
 	font-size: 22em;
 	font-weight: 900;
-   	color: white;   /*Fallback: assume this color ON TOP of image */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: white;   /*Fallback: assume this color ON TOP of image */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.row, .container-fluid {
+  margin: 0;
 }
 
 #summary {
@@ -48,11 +52,11 @@ body {
 
 /*Phones & tablets, portrait */
 #explore {
-    font-size: 4vw;
-    margin-top: 1.3em;
-    position:absolute; 
-    bottom:0;  
-    margin-bottom:3vh;
+  font-size: 4vw;
+  margin-top: 1.3em;
+  position:absolute; 
+  bottom:0;  
+  margin-bottom:3vh;
 }
 
 /*Phones & tablets, landscape*/
@@ -69,8 +73,8 @@ body {
     }
 
     #explore {
-        position: static;
-        font-size: 2.5vw;
+      position: static;
+      font-size: 2.5vw;
     }
 }
 
@@ -84,8 +88,8 @@ body {
     }
 
     #explore {
-        position: static;
-        font-size: 2.5vw;
+      position: static;
+      font-size: 2.5vw;
     }
 }
 
@@ -93,7 +97,7 @@ body {
 @media only screen 
   and (min-device-width: 1268px)  {
     #hello_title {
-      font-size: 25vw;
+      font-size: 18vw;
     }
 
     #summary {
@@ -101,7 +105,7 @@ body {
     }
 
     #explore {
-    position: static;
-    font-size: 2.5vw;
+      position: static;
+      font-size: 2vw;
     }
 }
