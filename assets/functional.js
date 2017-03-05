@@ -1,15 +1,15 @@
 window.onload = function() {
-  showContent();
+  // showContent();
   smoothScroll();
   loadImages();
   myLoop();
 };
 
-//fade in the home page
-function showContent() {
-  $('#page_container').removeClass('fade-out'); //fade-in the body
-  setTimeout(function() {$('#hello_title').removeClass('fade-out');}, 500); //fade-in the title(slow)
-}
+// //fade in the home page
+// function showContent() {
+//   $('#page_container').removeClass('fade-out'); //fade-in the body
+//   setTimeout(function() {$('#hello_title').removeClass('fade-out');}, 500); //fade-in the title(slow)
+// }
 
 //add smooth scroll effect when jumping to sections
 function smoothScroll() {
@@ -26,7 +26,7 @@ function smoothScroll() {
 //STORE PICTURES IN ARRAY
 var imgArray = [];
 function loadImages(){
-	var folder = "assets/img/";
+	var folder = "assets/img";
 	$.ajax({
     	url : folder,
     	async: false,
@@ -58,4 +58,4 @@ function myLoop () {
    	}, 2000);
 }
 
-document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

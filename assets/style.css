@@ -8,21 +8,6 @@ body {
 	font-family: 'Mada', sans-serif;
 }
 
-#page_container {
-  opacity: 1;
-  transition: 2s opacity;
-}
-
-#page_container.fade-out, #hello_title.fade-out {
-  opacity: 0;
-  transition: none;
-}
-
-#page_container.blured {
-  opacity: .7;
-}
-
-
 #overview_section {
   display: flex;
   justify-content: center;
@@ -44,14 +29,43 @@ body {
   margin: 0;
 }
 
+
 #summary {
 	text-align: center;
 	font-size: 4.5vw;
 	max-width: 78%;
 }
 
+.text-center {
+  padding: 1px;
+}
+
+#professional, #personal {
+  min-height: 50vh;
+}
+
+
+#professional h2, #personal h2 {
+  font-size: 8vw;
+  margin-bottom: 5vh;
+}
+
+#professional p, #personal p {
+  font-size: 5vw;
+  padding: 5px;
+}
+
+
 /*Phones & tablets, portrait */
 #explore {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bolder; 
   font-size: 4vw;
   margin-top: 1.3em;
   position:absolute; 
@@ -76,7 +90,17 @@ body {
       position: static;
       font-size: 2.5vw;
     }
+
+    #professional h2, #personal h2 {
+      font-size: 4vw;
+  }
+
+  #professional p, #personal p {
+    font-size: 2.5vw;
+    padding: 0px;
+  }
 }
+
 
 /*Common desktops, landscape*/
 @media only screen 
@@ -91,6 +115,18 @@ body {
       position: static;
       font-size: 2.5vw;
     }
+
+    #professional p, #personal p {
+      font-size: 2.5vw;
+      padding: 0px;
+  }
+  #professional h2, #personal h2 {
+      font-size: 4vw;
+  }
+
+  .col-lg-6 {
+    min-height: 100vh !important;
+  }
 }
 
 /*Wide screens*/
@@ -108,4 +144,17 @@ body {
       position: static;
       font-size: 2vw;
     }
+
+    #professional p, #personal p {
+    font-size: 2.5vw;
+    padding: 0px;
+  }
+
+  #professional h2, #personal h2 {
+      font-size: 5vw;
+  }
+
+  .col-lg-6 {
+    min-height: 100vh !important;
+  }
 }
