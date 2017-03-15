@@ -1,0 +1,202 @@
+/**
+* SassFlexbox
+* Manage Flexbox in Sass easily.
+*
+* @author     Samuel Marchal (zessx)
+* @version    0.1
+*/
+/*
+    Display
+ */
+#overview_section, .flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+/*
+    Flex direction
+ */
+#overview_section, .flex-container {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/*
+    Flex wrap
+ */
+#overview_section, .flex-container {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  flex-wrap: nowrap; }
+
+/*
+    Flex flow
+ */
+/*
+    Order
+ */
+/*
+    Flex grow
+ */
+/*
+    Flex shrink
+ */
+/*
+    Flex basis
+ */
+/*
+    Flex
+ */
+/*
+    Justify content
+ */
+#overview_section, .flex-container {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-flex-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+/*
+    Align items
+ */
+#overview_section, .flex-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+/*
+    Align self
+ */
+/*
+    Align content
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Mada', sans-serif; }
+
+#overview_section {
+  min-height: 100vh; }
+
+#hello_title {
+  width: inherit;
+  font-size: 22em;
+  font-weight: 900;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-background-color: transparent; }
+
+.row, .container-fluid {
+  margin: 0; }
+
+#summary {
+  text-align: center;
+  font-size: 4.5vw;
+  max-width: 78%; }
+
+.text-center {
+  padding: 1px; }
+
+#professional {
+  background: #2F5E8E; }
+
+#personal {
+  background: #F07746; }
+
+/*Phones & tablets, portrait */
+#professional, #personal {
+  min-height: 100vh;
+  color: white; }
+  #professional h2, #personal h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh; }
+  #professional p, #personal p {
+    font-size: 5vw;
+    padding: 5px; }
+
+#explore {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: white;
+  background-color: #008CBA;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 25px;
+  margin-top: 1.3em;
+  margin-bottom: 3vh;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0; }
+
+/*Phones & tablets, landscape*/
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #hello_title {
+    font-size: 15em; }
+
+  #summary {
+    font-size: 3vw; }
+
+  #explore {
+    position: static;
+    font-size: 2.5vw; }
+
+  #professional h2, #personal h2 {
+    font-size: 4vw; }
+  #professional p, #personal p {
+    font-size: 2.5vw;
+    padding: 0px; } }
+/*Common desktops, landscape*/
+@media only screen and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #summary {
+    font-size: 2.5vw; }
+
+  #explore {
+    position: static;
+    font-size: 2.5vw; }
+
+  #professional h2, #personal h2 {
+    font-size: 4vw; }
+  #professional p, #personal p {
+    font-size: 2.5vw;
+    padding: 0px; }
+
+  .col-lg-6 {
+    min-height: 100vh !important; } }
+/*Wide screens*/
+@media only screen and (min-device-width: 1268px) {
+  #hello_title {
+    font-size: 18vw; }
+
+  #summary {
+    font-size: 2.5vw; }
+
+  #explore {
+    position: static;
+    font-size: 2vw; }
+
+  #professional h2, #personal h2 {
+    font-size: 5vw; }
+  #professional p, #personal p {
+    font-size: 2.5vw;
+    padding: 0px; }
+
+  .col-lg-6 {
+    min-height: 100vh !important; } }
+
+/*# sourceMappingURL=style.css.map */

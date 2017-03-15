@@ -1,0 +1,180 @@
+@import "./sass-flexbox";
+@import "./vars";
+@import "./mixins";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Mada', sans-serif;
+}
+
+#overview_section {
+	@include display-flex();
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-flow(column, nowrap);
+	min-height: 100vh;
+}
+
+#hello_title {
+	width: inherit;
+	@include style-text(22em, 900, white);
+	-webkit-background-clip: text;
+	-webkit-background-color: transparent;
+}
+
+.row, .container-fluid {
+	margin: 0;
+}
+
+#summary {
+	text-align: center;
+	font-size: 4.5vw;
+	max-width: 78%;
+}
+
+.text-center {
+	padding: 1px;
+}
+
+#professional {
+	background: $professionalBlue;
+}
+
+#personal {
+	background: $personalOrange;
+}
+
+.flex-container {
+	@include display-flex();
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-flow(column, nowrap);
+}
+
+/*Phones & tablets, portrait */
+#professional, #personal {
+	min-height: 100vh;
+	color: white;
+
+ 	& h2 {
+  		font-size: 8vw;
+  		margin-bottom: 5vh;
+  	}
+
+  	& p {
+  		font-size: 5vw;
+  		padding: 5px;
+  	}
+}
+
+#explore {
+	@include style-text(4vw, bolder, white);
+  	background-color: #008CBA;
+  	display: inline-block;
+  	text-align: center;
+  	padding: 10px 25px;
+  	margin-top: 1.3em;
+ 	margin-bottom:3vh;
+  	border: none;
+  	border-radius: 4px;
+  	position:absolute; 
+  	bottom:0;  
+}
+
+/*Phones & tablets, landscape*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #hello_title {
+    	font-size: 15em;
+    }
+
+    #summary {
+      	font-size: 3vw;
+    }
+
+    #explore {
+      	position: static;
+      	font-size: 2.5vw;
+    }
+
+    #professional, #personal {
+    	& h2 {
+      		font-size: 4vw;
+  		}
+
+  		& p {
+  			font-size: 2.5vw;
+    		padding: 0px;
+  		}
+  	}
+}
+
+/*Common desktops, landscape*/
+@media only screen 
+  and (min-device-width: 800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #summary {
+      	font-size: 2.5vw;
+    }
+
+    #explore {
+      	position: static;
+      	font-size: 2.5vw;
+    }
+
+    #professional, #personal {
+    	& h2 {
+      		font-size: 4vw;
+  		}
+
+  		& p {
+  			font-size: 2.5vw;
+    		padding: 0px;
+  		}
+  	}
+
+  	.col-lg-6 {
+    	min-height: 100vh !important;
+  	}
+}
+
+/*Wide screens*/
+@media only screen 
+  and (min-device-width: 1268px)  {
+    #hello_title {
+      	font-size: 18vw;
+    }
+
+    #summary {
+      	font-size: 2.5vw;
+    }
+
+    #explore {
+      	position: static;
+      	font-size: 2vw;
+    }
+
+    #professional, #personal {
+    	& h2 {
+      		font-size: 5vw;
+  		}
+
+  		& p {
+  			font-size: 2.5vw;
+    		padding: 0px;
+  		}
+  	}
+
+  	.col-lg-6 {
+    	min-height: 100vh !important;
+  	}
+}
+

@@ -40,14 +40,28 @@ body {
   padding: 1px;
 }
 
-#professional, #personal {
-  min-height: 50vh;
+#options_section {
 }
 
+#professional, #personal {
+  min-height: 100vh;
+
+}
+
+#professional {
+  background: #2F5E8E;
+  color: white;
+}
+
+#personal {
+  background: #F07746;
+  color: white;
+}
 
 #professional h2, #personal h2 {
   font-size: 8vw;
   margin-bottom: 5vh;
+
 }
 
 #professional p, #personal p {
