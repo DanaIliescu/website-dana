@@ -3,6 +3,7 @@ window.onload = function() {
   smoothScroll();
   loadImages();
   myLoop();
+  moveSection();
 };
 
 // //fade in the home page
@@ -56,6 +57,25 @@ function myLoop () {
         	i = 0;             
       	} 
    	}, 2000);
+}
+
+function moveSection () {
+  // media query event handler
+  if (matchMedia) {
+    var mq = window.matchMedia("(min-width: 321px) and (orientation: landscape)" );
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+  }
+
+  // media query change
+  function WidthChange(mq) {
+    if (mq.matches) {
+      $('#skills').insertAfter('#spisebar');
+    } else {
+      // window width is less than 500px
+      $('#skills').insertAfter('#progress');
+  }
+  }
 }
 
 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
