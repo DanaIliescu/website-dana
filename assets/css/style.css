@@ -129,7 +129,7 @@ body {
   background-color: #30a1c0; }
 
 #personal .flex-item {
-  background-color: #FF6D1F; }
+  background-color: #ff9c3c; }
 
 .flex-item {
   color: white;
@@ -216,6 +216,8 @@ body {
     font-size: 4vw;
     padding-top: 3%;
     padding-bottom: 2%; }
+  #options_section img:nth-child(1) {
+    height: 30vh; }
 
   .flex-item {
     font-size: 2.5vw;
