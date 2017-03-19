@@ -3,7 +3,8 @@ window.onload = function() {
   smoothScroll();
   loadImages();
   myLoop();
-  moveSection();
+  moveSection('#skills', '#progress', '#spisebar');
+  moveSection('#languages', '#interests', '#about_me'); //DOESN'T F WORK
 };
 
 // //fade in the home page
@@ -59,7 +60,7 @@ function myLoop () {
    	}, 2000);
 }
 
-function moveSection () {
+function moveSection (section, insertAfterSectionIfLess, insertAfterSectionIfMore) {
   // media query event handler
   if (matchMedia) {
     var mq = window.matchMedia("(min-width: 321px) and (orientation: landscape)" );
@@ -70,10 +71,10 @@ function moveSection () {
   // media query change
   function WidthChange(mq) {
     if (mq.matches) {
-      $('#skills').insertAfter('#spisebar');
+      $(section).insertAfter(insertAfterSectionIfMore);
     } else {
       // window width is less than 500px
-      $('#skills').insertAfter('#progress');
+      $(section).insertAfter(insertAfterSectionIfLess);
   }
   }
 }

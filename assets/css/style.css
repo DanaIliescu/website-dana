@@ -167,6 +167,9 @@ body {
   position: absolute;
   bottom: 0; }
 
+.flex-item #about_img {
+  width: 47vw; }
+
 .skillset .skill-item {
   margin-bottom: 15px;
   overflow: hidden;
@@ -181,6 +184,8 @@ body {
     .skillset .skill-item .skill-bar .skill-bar-inner {
       height: inherit;
       background: #7bc2d3; }
+    .skillset .skill-item .skill-bar .language {
+      background: #FFCD82; }
 
 #skill-html {
   width: 90%; }
@@ -199,6 +204,18 @@ body {
 
 #skill-mysql {
   width: 85%; }
+
+#skill-romanian {
+  width: 100%; }
+
+#skill-english {
+  width: 95%; }
+
+#skill-danish {
+  width: 75%; }
+
+#skill-french {
+  width: 50%; }
 
 /*Phones & tablets, landscape*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {

@@ -116,6 +116,10 @@ body {
   	bottom:0;  
 }
 
+.flex-item #about_img {
+  width: 47vw;   // TO BE REMOVED
+}
+
 .skillset .skill-item {
     margin-bottom: 15px;
     overflow: hidden;
@@ -134,6 +138,10 @@ body {
       & .skill-bar-inner {
         height: inherit;
         background: #7bc2d3;
+      }
+
+      & .language {
+        background: #FFCD82;
       }
     }
 }
@@ -162,6 +170,21 @@ body {
   width: 85%;
 }
 
+#skill-romanian {
+  width: 100%;
+}
+
+#skill-english {
+  width: 95%;
+}
+
+#skill-danish {
+  width: 75%;
+}
+
+#skill-french {
+  width: 50%;
+}
 
 
 /*Phones & tablets, landscape*/
