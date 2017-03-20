@@ -4,8 +4,12 @@ window.onload = function() {
   loadImages();
   myLoop();
   moveSection('#skills', '#progress', '#spisebar');
-  moveSection('#languages', '#interests', '#about_me'); //DOESN'T F WORK
+  moveSection('#languages', '#interests', '#about_me'); 
+  moveSectionTablet('#skills', '#progress', '#spisebar');
+  moveSectionTablet('#languages', '#interests', '#about_me'); 
 };
+
+//, '(min-device-width: 768px) and (orientation: portrait)'
 
 // //fade in the home page
 // function showContent() {
@@ -63,7 +67,7 @@ function myLoop () {
 function moveSection (section, insertAfterSectionIfLess, insertAfterSectionIfMore) {
   // media query event handler
   if (matchMedia) {
-    var mq = window.matchMedia("(min-width: 321px) and (orientation: landscape)" );
+    var mq = window.matchMedia('(min-device-width: 570px) and (orientation: landscape)');
     mq.addListener(WidthChange);
     WidthChange(mq);
   }
@@ -73,8 +77,27 @@ function moveSection (section, insertAfterSectionIfLess, insertAfterSectionIfMor
     if (mq.matches) {
       $(section).insertAfter(insertAfterSectionIfMore);
     } else {
-      // window width is less than 500px
+      // window width is less than 570px
       $(section).insertAfter(insertAfterSectionIfLess);
+  }
+  }
+}
+
+function moveSectionTablet (section, insertAfterSectionIfLess, insertAfterSectionIfMore) {
+  // media query event handler
+  if (matchMedia) {
+    var mq = window.matchMedia('(min-device-width: 768px) and (orientation: portrait)');
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+  }
+
+  // media query change
+  function WidthChange(mq) {
+    if (mq.matches) {
+      $(section).insertAfter(insertAfterSectionIfMore);
+    } else {
+      // window width is less than 768px
+      $(section).insertAfter(insertAfterSectionIfMore);
   }
   }
 }

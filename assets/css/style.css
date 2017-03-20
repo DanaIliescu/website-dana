@@ -109,6 +109,21 @@ body {
   font-size: 4.5vw;
   max-width: 78%; }
 
+#explore {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: white;
+  background-color: #008CBA;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 25px;
+  margin-top: 1.3em;
+  margin-bottom: 3vh;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0; }
+
 #options_section {
   color: #0e4754;
   background: #f5f5f2;
@@ -151,21 +166,6 @@ body {
     filter: alpha(opacity=50);
     filter: gray;
     filter: grayscale(100%); }
-
-#explore {
-  font-size: 4vw;
-  font-weight: bolder;
-  color: white;
-  background-color: #008CBA;
-  display: inline-block;
-  text-align: center;
-  padding: 10px 25px;
-  margin-top: 1.3em;
-  margin-bottom: 3vh;
-  border: none;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 0; }
 
 .flex-item #about_img {
   width: 47vw; }
@@ -217,7 +217,7 @@ body {
 #skill-french {
   width: 50%; }
 
-/*Phones & tablets, landscape*/
+/*Small Phones & tablets, landscape*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   #hello_title {
     font-size: 15em; }
@@ -245,7 +245,56 @@ body {
   .skillset .skill-item .skill-title {
     font-size: 2.5vw; }
 
-  #professional, #personal .flex-container {
+  #professional, #personal {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    flex-wrap: nowrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-align-items: baseline;
+    align-items: baseline;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around; }
+
+  .inner-flex {
+    width: 100vw;
+    flex-direction: column; }
+    .inner-flex .flex-item {
+      width: 97%; } }
+/*Big Phones & tablets, landscape*/
+@media only screen and (min-device-width: 569px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #professional, #personal {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    flex-wrap: nowrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-align-items: baseline;
+    align-items: baseline;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around; } }
+/* Tablets, portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #professional, #personal {
+    min-height: inherit;
     -webkit-box-orient: horizontal;
     -moz-box-orient: horizontal;
     -webkit-flex-direction: row;
@@ -265,16 +314,41 @@ body {
     -webkit-justify-content: space-around;
     justify-content: space-around; }
 
-  .inner-flex > .flex-item {
-    width: 97%; } }
-/*Common desktops, landscape*/
-@media only screen and (min-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  #summary {
-    font-size: 2.5vw; }
+  .inner-flex {
+    width: 100vw;
+    flex-direction: column; }
+    .inner-flex .flex-item {
+      width: 97%; }
 
-  #explore {
-    position: static;
+  #options_section h2 {
+    font-size: 5vw;
+    padding-top: 3%;
+    padding-bottom: 2%; }
+  #options_section img:nth-child(1) {
+    height: 13vh; }
+
+  .flex-item {
+    font-size: 2.5vw;
+    padding-right: 3%; }
+    .flex-item h3 {
+      font-size: 3.5vw; }
+
+  .skillset .skill-item .skill-title {
     font-size: 2.5vw; } }
+/* Tablets, landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
+  #options_section h2 {
+    font-size: 4.5vw; }
+  #options_section img:nth-child(1) {
+    height: 13vh; }
+
+  .flex-item {
+    font-size: 2vw; }
+    .flex-item h3 {
+      font-size: 3vw; }
+
+  .skillset .skill-item .skill-title {
+    font-size: 2vw; } }
 /*Wide screens*/
 @media only screen and (min-device-width: 1268px) {
   #hello_title {
@@ -286,5 +360,8 @@ body {
   #explore {
     position: static;
     font-size: 2vw; } }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* STYLES GO HERE */ }
 
 /*# sourceMappingURL=style.css.map */
