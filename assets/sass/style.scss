@@ -325,8 +325,8 @@ body {
     #options_section {
       & h2 {
         font-size: 5vw;
-        padding-top: 3%;
-        padding-bottom: 2%;
+        padding-top: 5%;
+        padding-bottom: 5%;
       }
 
       & img:nth-child(1) {
@@ -351,11 +351,23 @@ body {
 /* Tablets, landscape */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1366px) 
+  and (max-device-height: 1366px) 
   and (orientation: landscape) {
+    #hello_title {
+      font-size: 25vh;
+    }
+
+    #summary {
+      font-size: 2.5vw;
+    }
+
+    #explore {
+      font-size: 2.2vw;
+    }
+
     #options_section {
       & h2 {
-        font-size: 4.5vw;
+        font-size: 4vw;
       }
 
       & img:nth-child(1) {
@@ -363,38 +375,75 @@ body {
       }
     }
 
+    #professional, #personal {
+      max-height: inherit;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+      -ms-flex-wrap: none;
+      flex-wrap: nowrap;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+      -webkit-align-items: baseline;
+      -moz-align-items: baseline;
+      align-items: baseline;
+      -moz-justify-content: space-around;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+    }
+
+    .inner-flex {
+       width: 100vw;
+       flex-direction: column;
+      .flex-item{
+        width: 97%;
+      }
+    }
+
+
     .flex-item {
-      font-size: 2vw;
+      font-size: 1.7vw;
 
       & h3 {
-        font-size: 3vw;
+        font-size: 2.5vw;
       }
     }
 
     .skillset .skill-item .skill-title {
-      font-size: 2vw;
+      font-size: 1.7vw;
     }
 }
 
-// /*Common desktops, landscape*/
-// @media only screen and (min-device-width:800px) { 
-//     #summary {
-//       	font-size: 2.5vw;
-//     }
+/*Common desktops, landscape*/
+@media only screen and (min-width: 1367px) and (orientation: landscape) { 
+    #summary {
+      	font-size: 2.5vw;
+    }
 
-//     #explore {
-//       	position: static;
-//       	font-size: 2.5vw;
-//     }
+    #explore {
+      	position: static;
+      	font-size: 2.5vw;
+    }
 
-//     .flex-item {
-//       font-size: 10vw;
+    #options_section {
+      & h2 {
+        font-size: 2.5vw;
+      }
+    }
 
-//       & h3 {
-//         font-size: 3vw;
-//       }
-//     }
-// }
+    .flex-item {
+      font-size: 1.5vw;
+
+      & h3 {
+        font-size: 2.5vw;
+      }
+    }
+}
 
 /*Wide screens*/
 @media only screen 
@@ -411,10 +460,72 @@ body {
       	position: static;
       	font-size: 2vw;
     }
+
+    #professional, #personal {
+      min-height: inherit;
+    }
+
+    #options_section {
+      padding: 0 4% 2% 4%;
+      & h2 {
+        padding: 5%;
+        font-size: 2.8vw;
+      }
+    }
+
+    .inner-flex {
+      margin: 3px;
+    }
+
+    .flex-item {
+      font-size: 1.2vw;
+      width: 100%;
+      margin: 3px;
+      & h3 {
+        padding-top: 0.5%;
+        font-size: 2vw;
+      }
+    }
+
+    .skillset .skill-item .skill-title {
+      font-size: 1.2vw;
+    }
 }
 
 /* Large screens ----------- */
 @media only screen
 and (min-width : 1824px) {
-/* STYLES GO HERE */
+    #hello_title {
+        font-size: 16vw;
+    }
+
+    #summary {
+        font-size: 1.5vw;
+    }
+
+    #explore {
+        position: static;
+        font-size: 1.5vw;
+    }
+
+    #options_section {
+      padding: 0 3.5% 2% 3.5%;
+      & h2 {
+        padding: 2.7%;
+        font-size: 2vw;
+      }
+    }
+
+    .flex-item {
+      font-size: 1.2vw;
+      width: 100%;
+      & h3 {
+        padding-top: 0.5%;
+        font-size: 1.7vw;
+      }
+    }
+
+    .skillset .skill-item .skill-title {
+      font-size: 1.2vw;
+    }
 }
