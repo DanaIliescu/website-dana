@@ -466,7 +466,7 @@ body {
     }
 
     #options_section {
-      padding: 0 4% 2% 4%;
+      padding: 0 10% 2% 10%;
       & h2 {
         padding: 5%;
         font-size: 2.8vw;
@@ -474,7 +474,11 @@ body {
     }
 
     .inner-flex {
-      margin: 3px;
+      margin: -6px;
+    }
+
+    .flex-item #about_img {
+      width: 15vw;
     }
 
     .flex-item {
@@ -509,7 +513,7 @@ and (min-width : 1824px) {
     }
 
     #options_section {
-      padding: 0 3.5% 2% 3.5%;
+      padding: 0 12% 2% 12%;
       & h2 {
         padding: 2.7%;
         font-size: 2vw;
