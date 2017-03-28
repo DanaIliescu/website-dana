@@ -117,7 +117,16 @@ body {
 }
 
 .flex-item #about_img {
-    width: 47vw;   // TO BE REMOVED
+    width: 34vw;   
+}
+
+.flex-item #sb_img {
+    height: 20vh;   
+}
+
+.flex-item #football_img {
+    height: 12vh;
+    padding-top: 4%;
 }
 
 .skillset .skill-item {
@@ -223,6 +232,14 @@ body {
 
       & h3 {
         font-size: 3.5vw;
+      }
+
+      & #about_img {
+        width: 21vw;
+      }
+
+      & #football_img {
+        height: 27vh;
       }
     }
 
@@ -341,6 +358,10 @@ body {
       & h3 {
         font-size: 3.5vw;
       }
+
+      & #about_img {
+        width: auto;   
+      }
     }
 
     .skillset .skill-item .skill-title {
@@ -412,6 +433,10 @@ body {
       & h3 {
         font-size: 2.5vw;
       }
+
+      & #about_img {
+        width: auto;   
+      }
     }
 
     .skillset .skill-item .skill-title {
@@ -477,8 +502,8 @@ body {
       margin: -6px;
     }
 
-    .flex-item #about_img {
-      width: 15vw;
+    .skillset .skill-item {
+      padding: 0 3% 0 3%;
     }
 
     .flex-item {
