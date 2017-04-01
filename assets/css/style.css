@@ -91,7 +91,8 @@ body {
   font-family: 'Mada', sans-serif; }
 
 #overview_section {
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: #FAFAF7; }
 
 #hello_title {
   width: inherit;
@@ -141,17 +142,29 @@ body {
   min-height: 90vh; }
 
 #professional .flex-item {
-  background-color: #30a1c0; }
+  background-color: #30a1c0;
+  transition: all 0.7s ease-in-out;
+  transition-timing-function: linear; }
+  #professional .flex-item:hover {
+    opacity: 1.0;
+    transition: opacity 0.55s ease-in-out;
+    background-color: #FAFAF7;
+    color: #275e6e; }
 
 #personal .flex-item {
   background-color: #ff9c3c; }
+  #personal .flex-item:hover {
+    background-color: #FAFAF7;
+    color: #C9470E; }
 
 .flex-item {
-  color: white;
+  color: #FAFAF7;
   margin: 1%;
   width: 85vw;
   font-size: 4vw;
   padding: 5px; }
+  .flex-item:hover {
+    cursor: pointer; }
   .flex-item h3 {
     font-size: 5.5vw;
     text-align: left;

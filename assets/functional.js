@@ -9,18 +9,16 @@ window.onload = function() {
   moveSectionTablet('#languages', '#interests', '#about_me'); 
 };
 
-//, '(min-device-width: 768px) and (orientation: portrait)'
-
-// //fade in the home page
+// // Fade in the home page
 // function showContent() {
 //   $('#page_container').removeClass('fade-out'); //fade-in the body
 //   setTimeout(function() {$('#hello_title').removeClass('fade-out');}, 500); //fade-in the title(slow)
 // }
 
-//add smooth scroll effect when jumping to sections
+// Add smooth scroll effect when jumping to section
 function smoothScroll() {
   var $root = $('html, body');
-  $('a.scrolly').bind('click', function(event) {
+  $('#explore').bind('click', function(event) {
       var $anchor = $(this);
       $root.stop().animate({
           scrollTop: $($anchor.attr('href')).offset().top
@@ -29,7 +27,7 @@ function smoothScroll() {
   });
 }
 
-//STORE PICTURES IN ARRAY
+// Store pictures in array
 var imgArray = [];
 function loadImages(){
 	var folder = "assets/img";
@@ -47,7 +45,7 @@ function loadImages(){
 	console.log(imgArray);
 }
 
-// change the image every 2 seconds            
+// Change the image every 2 seconds            
 var i = 0; 
 function myLoop () {          
    setInterval(function () {  
@@ -64,6 +62,7 @@ function myLoop () {
    	}, 2000);
 }
 
+// Move Section according to orientation
 function moveSection (section, insertAfterSectionIfLess, insertAfterSectionIfMore) {
   // media query event handler
   if (matchMedia) {
@@ -83,6 +82,7 @@ function moveSection (section, insertAfterSectionIfLess, insertAfterSectionIfMor
   }
 }
 
+// Move Section according to orientation
 function moveSectionTablet (section, insertAfterSectionIfLess, insertAfterSectionIfMore) {
   // media query event handler
   if (matchMedia) {

@@ -18,6 +18,7 @@ body {
 	@include align-items(center);
 	@include flex-flow(column, nowrap);
 	min-height: 100vh;
+  background: #FAFAF7; //TO BE MOVED TO VARS
 }
 
 #hello_title {
@@ -75,10 +76,26 @@ body {
 
 #professional .flex-item {
     background-color: $bgProfessionalBlue;
+      transition: all 0.7s ease-in-out;
+          transition-timing-function: linear;
+
+    &:hover {
+    opacity: 1.0;
+    transition: opacity 0.55s ease-in-out;
+    // -moz-transition: opacity 2s ease-in-out;
+    // -webkit-transition: opacity 2s ease-in-out;
+      background-color: #FAFAF7;
+      color: #275e6e;
+
+  }
 }
 
 #personal .flex-item {
     background-color: $bgPersonalOrange;
+    &:hover {
+      background-color: #FAFAF7;
+      color: #C9470E;
+  }
 }
 
 .flex-container {
@@ -89,11 +106,15 @@ body {
 }
 
 .flex-item {
-  color: white;
+  color: #FAFAF7;
   margin: 1%;
   width: 85vw;
   font-size: 4vw;
   padding: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   & h3 {
     font-size: 5.5vw;
