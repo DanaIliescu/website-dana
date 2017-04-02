@@ -18,7 +18,7 @@ body {
 	@include align-items(center);
 	@include flex-flow(column, nowrap);
 	min-height: 100vh;
-  background: #FAFAF7; //TO BE MOVED TO VARS
+  background: $bgWhiteGrey; 
 }
 
 #hello_title {
@@ -40,16 +40,21 @@ body {
 
 #explore {
   @include style-text(4vw, bolder, white);
-    background-color: #008CBA;
-    display: inline-block;
-    text-align: center;
-    padding: 10px 25px;
-    margin-top: 1.3em;
-    margin-bottom:3vh;
-    border: none;
-    border-radius: 4px;
-    position:absolute; 
-    bottom:0;  
+  background-color: $bgProfessionalBlue;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 25px;   // NO PX!
+  margin-top: 1.3em;
+  margin-bottom:3vh;
+  border: none;
+  border-radius: 4px;
+  position:absolute; 
+  bottom:0;  
+  @include fade();
+
+  &:hover {
+    background-color: darken($bgProfessionalBlue, 10%);
+  }
 }
 
 #options_section {
@@ -76,25 +81,22 @@ body {
 
 #professional .flex-item {
     background-color: $bgProfessionalBlue;
-      transition: all 0.7s ease-in-out;
-          transition-timing-function: linear;
+    @include fade();
 
     &:hover {
-    opacity: 1.0;
-    transition: opacity 0.55s ease-in-out;
-    // -moz-transition: opacity 2s ease-in-out;
-    // -webkit-transition: opacity 2s ease-in-out;
-      background-color: #FAFAF7;
-      color: #275e6e;
+      background-color: $bgWhiteGrey;
+      color: darken($bgProfessionalBlue, 25%);
 
   }
 }
 
 #personal .flex-item {
     background-color: $bgPersonalOrange;
+    @include fade();
+
     &:hover {
-      background-color: #FAFAF7;
-      color: #C9470E;
+      background-color: $bgWhiteGrey;
+      color: $bgHoverOrange;
   }
 }
 
@@ -106,7 +108,7 @@ body {
 }
 
 .flex-item {
-  color: #FAFAF7;
+  color: $bgWhiteGrey;
   margin: 1%;
   width: 85vw;
   font-size: 4vw;
@@ -114,6 +116,17 @@ body {
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+    & img.desaturate {
+      filter: none;
+      -webkit-filter: grayscale(0%);
+    }
+
+    & .skillset .skill-item .skill-bar {
+      background: darken($bgLightGrey, 10%);
+    }
+
   }
 
   & h3 {
@@ -163,19 +176,20 @@ body {
 
     & .skill-bar {
       height: 12px;
-      background: #f5f5f5;
+      background: $bgLightGrey;
       
       & .skill-bar-inner {
         height: inherit;
-        background: #7bc2d3;
+        background: $innerBlue;
       }
 
       & .language {
-        background: #FFCD82;
+        background: $innerOrange;
       }
     }
 }
 
+// WRITE THESE WITH NTH CHILD
 #skill-html {
   width: 90%;
 }
@@ -564,6 +578,10 @@ and (min-width : 1824px) {
         padding: 2.7%;
         font-size: 2vw;
       }
+
+      & img:nth-child(1) {
+        height: 12vh;
+      }
     }
 
     .flex-item {
@@ -572,6 +590,10 @@ and (min-width : 1824px) {
       & h3 {
         padding-top: 0.5%;
         font-size: 1.7vw;
+      }
+
+      & #about_img {
+        width: auto;   
       }
     }
 
