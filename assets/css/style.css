@@ -117,18 +117,18 @@ body {
   background-color: #30a1c0;
   display: inline-block;
   text-align: center;
-  padding: 10px 25px;
+  padding: 0.4em 1.3em;
   margin-top: 1.3em;
   margin-bottom: 3vh;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.2em;
   position: absolute;
   bottom: 0;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   overflow: hidden;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color; }
   #explore:hover {
@@ -155,8 +155,8 @@ body {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   overflow: hidden;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color; }
   #professional .flex-item:hover {
@@ -168,8 +168,8 @@ body {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   overflow: hidden;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color; }
   #personal .flex-item:hover {
@@ -178,10 +178,10 @@ body {
 
 .flex-item {
   color: #FAFAF7;
-  margin: 1%;
+  margin: 0.25em;
   width: 85vw;
   font-size: 4vw;
-  padding: 5px; }
+  padding: 0.25em; }
   .flex-item:hover {
     cursor: pointer;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); }
@@ -216,15 +216,15 @@ body {
   padding-top: 4%; }
 
 .skillset .skill-item {
-  margin-bottom: 15px;
+  margin-bottom: 0.7em;
   overflow: hidden;
   padding: 0 3% 1% 3%; }
   .skillset .skill-item .skill-title {
     font-size: 4vw;
     margin-top: 0;
-    margin-bottom: 12px; }
+    margin-bottom: 0.7em; }
   .skillset .skill-item .skill-bar {
-    height: 12px;
+    height: 0.5em;
     background: #f5f5f2; }
     .skillset .skill-item .skill-bar .skill-bar-inner {
       height: inherit;
@@ -268,26 +268,28 @@ body {
     font-size: 15em; }
 
   #summary {
-    font-size: 3vw; }
+    font-size: 2vw; }
 
   #explore {
     position: static;
-    font-size: 2.5vw; }
+    font-size: 2.2vw; }
 
-  #options_section h2 {
-    font-size: 4vw;
-    padding-top: 3%;
-    padding-bottom: 2%; }
-  #options_section img:nth-child(1) {
-    height: 30vh; }
+  #options_section {
+    padding: 2em; }
+    #options_section h2 {
+      font-size: 4vw;
+      padding-top: 3%;
+      padding-bottom: 2%; }
+    #options_section img:nth-child(1) {
+      height: 25vh; }
 
   .flex-item {
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     padding-right: 3%; }
     .flex-item h3 {
-      font-size: 3.5vw; }
+      font-size: 3vw; }
     .flex-item #about_img {
-      width: 21vw; }
+      width: 19vw; }
     .flex-item #football_img {
       height: 27vh; }
 
@@ -315,10 +317,15 @@ body {
     justify-content: space-around; }
 
   .inner-flex {
-    width: 100vw;
-    flex-direction: column; }
+    width: 95vw;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column; }
     .inner-flex .flex-item {
-      width: 97%; } }
+      width: 98%; } }
 /*Big Phones & tablets, landscape*/
 @media only screen and (min-device-width: 569px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   #professional, #personal {
@@ -339,7 +346,23 @@ body {
     align-items: baseline;
     -moz-justify-content: space-around;
     -webkit-justify-content: space-around;
-    justify-content: space-around; } }
+    justify-content: space-around; }
+
+  #options_section img:nth-child(1) {
+    height: 20vh; }
+
+  .skillset .skill-item .skill-title {
+    font-size: 1.9vw; }
+
+  .flex-item {
+    font-size: 1.7vw;
+    padding-right: 3%; }
+    .flex-item h3 {
+      font-size: 2.3vw; }
+    .flex-item #about_img {
+      width: 15vw; }
+    .flex-item #football_img {
+      height: 20vh; } }
 /* Tablets, portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   #professional, #personal {
@@ -369,12 +392,14 @@ body {
     .inner-flex .flex-item {
       width: 97%; }
 
-  #options_section h2 {
-    font-size: 5vw;
-    padding-top: 5%;
-    padding-bottom: 5%; }
-  #options_section img:nth-child(1) {
-    height: 13vh; }
+  #options_section {
+    padding: 2em; }
+    #options_section h2 {
+      font-size: 5vw;
+      padding-top: 5%;
+      padding-bottom: 5%; }
+    #options_section img:nth-child(1) {
+      height: 13vh; }
 
   .flex-item {
     font-size: 2.5vw;
@@ -427,7 +452,7 @@ body {
     width: 100vw;
     flex-direction: column; }
     .inner-flex .flex-item {
-      width: 97%; }
+      width: 96.5%; }
 
   .flex-item {
     font-size: 1.7vw; }
@@ -441,7 +466,7 @@ body {
 /*Common desktops, landscape*/
 @media only screen and (min-width: 1367px) and (orientation: landscape) {
   #summary {
-    font-size: 2.5vw; }
+    font-size: 2.3vw; }
 
   #explore {
     position: static;
@@ -453,18 +478,21 @@ body {
   .flex-item {
     font-size: 1.5vw; }
     .flex-item h3 {
-      font-size: 2.5vw; } }
+      font-size: 2.5vw; }
+
+  .inner-flex .flex-item {
+    width: 96.5%; } }
 /*Wide screens*/
 @media only screen and (min-device-width: 1268px) {
   #hello_title {
     font-size: 18vw; }
 
   #summary {
-    font-size: 2.5vw; }
+    font-size: 2vw; }
 
   #explore {
     position: static;
-    font-size: 2vw; }
+    font-size: 1.5vw; }
 
   #professional, #personal {
     min-height: inherit; }
@@ -484,7 +512,7 @@ body {
   .flex-item {
     font-size: 1.2vw;
     width: 100%;
-    margin: 3px; }
+    margin: 0.2em; }
     .flex-item h3 {
       padding-top: 0.5%;
       font-size: 2vw; }
@@ -507,7 +535,7 @@ body {
     padding: 0 12% 2% 12%; }
     #options_section h2 {
       padding: 2.7%;
-      font-size: 2vw; }
+      font-size: 2.5vw; }
     #options_section img:nth-child(1) {
       height: 12vh; }
 
