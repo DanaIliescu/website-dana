@@ -206,14 +206,13 @@ body {
     filter: grayscale(100%); }
 
 .flex-item #about_img {
-  width: 34vw; }
+  width: 25vw; }
 
 .flex-item #sb_img {
-  height: 20vh; }
+  height: 15vh; }
 
 .flex-item #football_img {
-  height: 12vh;
-  padding-top: 4%; }
+  height: 13vh; }
 
 .skillset .skill-item {
   margin-bottom: 0.7em;
@@ -232,34 +231,26 @@ body {
     .skillset .skill-item .skill-bar .language {
       background: #FFCD82; }
 
-#skill-html {
+#skills .skillset .skill-item:nth-child(1) .skill-bar .skill-bar-inner {
   width: 90%; }
-
-#skill-css {
+#skills .skillset .skill-item:nth-child(2) .skill-bar .skill-bar-inner {
   width: 90%; }
-
-#skill-bootstrap {
+#skills .skillset .skill-item:nth-child(3) .skill-bar .skill-bar-inner {
   width: 75%; }
-
-#skill-jquery {
+#skills .skillset .skill-item:nth-child(4) .skill-bar .skill-bar-inner {
   width: 80%; }
-
-#skill-java {
+#skills .skillset .skill-item:nth-child(5) .skill-bar .skill-bar-inner {
+  width: 85%; }
+#skills .skillset .skill-item:nth-child(6) .skill-bar .skill-bar-inner {
   width: 85%; }
 
-#skill-mysql {
-  width: 85%; }
-
-#skill-romanian {
+#languages .skillset .skill-item:nth-child(1) .skill-bar .skill-bar-inner {
   width: 100%; }
-
-#skill-english {
+#languages .skillset .skill-item:nth-child(2) .skill-bar .skill-bar-inner {
   width: 95%; }
-
-#skill-danish {
+#languages .skillset .skill-item:nth-child(3) .skill-bar .skill-bar-inner {
   width: 75%; }
-
-#skill-french {
+#languages .skillset .skill-item:nth-child(4) .skill-bar .skill-bar-inner {
   width: 50%; }
 
 /*Small Phones & tablets, landscape*/
@@ -360,7 +351,7 @@ body {
     .flex-item h3 {
       font-size: 2.3vw; }
     .flex-item #about_img {
-      width: 15vw; }
+      width: 12vw; }
     .flex-item #football_img {
       height: 20vh; } }
 /* Tablets, portrait */
@@ -422,10 +413,12 @@ body {
   #explore {
     font-size: 2.2vw; }
 
-  #options_section h2 {
-    font-size: 4vw; }
-  #options_section img:nth-child(1) {
-    height: 13vh; }
+  #options_section {
+    padding: 2em; }
+    #options_section h2 {
+      font-size: 4vw; }
+    #options_section img:nth-child(1) {
+      height: 13vh; }
 
   #professional, #personal {
     max-height: inherit;

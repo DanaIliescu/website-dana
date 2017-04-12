@@ -151,16 +151,15 @@ body {
 }
 
 .flex-item #about_img {
-    width: 34vw;   
+    width: 25vw;   
 }
 
 .flex-item #sb_img {
-    height: 20vh;   
+    height: 15vh;   
 }
 
 .flex-item #football_img {
-    height: 12vh;
-    padding-top: 4%;
+    height: 13vh;
 }
 
 .skillset .skill-item {
@@ -190,46 +189,69 @@ body {
 }
 
 // WRITE THESE WITH NTH CHILD
-#skill-html {
-  width: 90%;
+#skills .skillset {
+  & .skill-item:nth-child(1){
+      & .skill-bar .skill-bar-inner {
+        width: 90%;
+      }
+  }
+
+  & .skill-item:nth-child(2){
+      & .skill-bar .skill-bar-inner {
+        width: 90%;
+      }
+  }
+
+  & .skill-item:nth-child(3){
+      & .skill-bar .skill-bar-inner {
+        width: 75%;
+      }
+  }
+
+  & .skill-item:nth-child(4){
+      & .skill-bar .skill-bar-inner {
+        width: 80%;
+      }
+  }
+
+  & .skill-item:nth-child(5){
+      & .skill-bar .skill-bar-inner {
+        width: 85%;
+      }
+  }
+
+  & .skill-item:nth-child(6){
+      & .skill-bar .skill-bar-inner {
+        width: 85%;
+      }
+  }
 }
 
-#skill-css {
-  width: 90%;
-}
+#languages .skillset {
+  & .skill-item:nth-child(1){
+      & .skill-bar .skill-bar-inner {
+        width: 100%;
+      }
+  }
 
-#skill-bootstrap {
-  width: 75%;
-}
+  & .skill-item:nth-child(2){
+      & .skill-bar .skill-bar-inner {
+        width: 95%;
+      }
+  }
 
-#skill-jquery {
-  width: 80%;
-}
+  & .skill-item:nth-child(3){
+      & .skill-bar .skill-bar-inner {
+        width: 75%;
+      }
+  }
 
-#skill-java {
-  width: 85%;
+  & .skill-item:nth-child(4){
+      & .skill-bar .skill-bar-inner {
+        width: 50%;
+      }
+  }
 }
-
-#skill-mysql {
-  width: 85%;
-}
-
-#skill-romanian {
-  width: 100%;
-}
-
-#skill-english {
-  width: 95%;
-}
-
-#skill-danish {
-  width: 75%;
-}
-
-#skill-french {
-  width: 50%;
-}
-
 
 /*Small Phones & tablets, landscape*/
 @media only screen 
@@ -362,7 +384,7 @@ body {
       }
 
       & #about_img {
-        width: 15vw;
+        width: 12vw;
       }
 
       & #football_img {
@@ -455,6 +477,7 @@ body {
     }
 
     #options_section {
+      padding: 2em;
       & h2 {
         font-size: 4vw;
       }
