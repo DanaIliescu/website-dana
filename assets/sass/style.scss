@@ -253,6 +253,14 @@ body {
   }
 }
 
+#contact_form {
+  min-height: 100vh;
+  @include display-flex();
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-flow(column, nowrap);
+}
+
 /*Small Phones & tablets, landscape*/
 @media only screen 
   and (min-device-width: 320px) 
