@@ -255,6 +255,34 @@ body {
 
 #contact_form {
   min-height: 100vh; }
+  #contact_form h3 {
+    font-size: 5vw;
+    padding: 0 1.5em 0.5em; }
+
+form {
+  width: 85vw;
+  font-size: 3.8vw; }
+  form p {
+    display: inline-block;
+    text-align: left;
+    width: 24%; }
+  form input:not([type=submit]), form select {
+    width: 75%;
+    border: none; }
+  form .form-group {
+    border: 1px solid black; }
+  form p, form input, form select, form textarea {
+    margin: 0;
+    padding: 0.7em 0.5em;
+    background: white; }
+  form textarea {
+    width: 100%;
+    border: none; }
+  form .form-group:nth-child(5) p {
+    display: block;
+    width: 100%; }
+  form .form-group:last-child {
+    border: none; }
 
 /*Small Phones & tablets, landscape*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {

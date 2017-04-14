@@ -188,7 +188,6 @@ body {
     }
 }
 
-// WRITE THESE WITH NTH CHILD
 #skills .skillset {
   & .skill-item:nth-child(1){
       & .skill-bar .skill-bar-inner {
@@ -259,6 +258,54 @@ body {
   @include justify-content(center);
   @include align-items(center);
   @include flex-flow(column, nowrap);
+
+  & h3 {
+    font-size: 5vw;
+    padding: 0 1.5em 0.5em;
+  }
+}
+
+form {
+  width: 85vw;
+  font-size: 3.8vw;
+
+  & p {
+    display: inline-block;
+    text-align: left;
+    width: 24%;
+  }
+
+  & input:not([type=submit]), select {
+    width: 75%;
+    border: none;
+  }
+
+  & .form-group {
+    border: 1px solid black;
+
+  }
+
+  & p, input, select, textarea {
+    margin: 0;
+    padding: 0.7em 0.5em;
+    background: white;
+  }
+
+  & textarea {
+    width: 100%;
+    border: none;
+  }
+
+  & .form-group:nth-child(5) {
+    & p {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  & .form-group:last-child {
+    border: none;
+  }
 }
 
 /*Small Phones & tablets, landscape*/
