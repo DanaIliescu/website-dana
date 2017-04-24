@@ -269,10 +269,13 @@ form {
   width: 85vw;
   font-size: 3.8vw;
 
-  & p {
+  & label {
     display: inline-block;
     text-align: left;
     width: 24%;
+    font-weight: lighter;
+
+    // color: $bgProfessionalBlue;
   }
 
   & input:not([type=submit]), select {
@@ -282,13 +285,21 @@ form {
 
   & .form-group {
     border: 1px solid black;
-
+    border-radius: 0.3em;
   }
 
-  & p, input, select, textarea {
-    margin: 0;
+  & select option {
+    font-size:  1.5vw;
+  }
+
+  & label, input, select, textarea {
     padding: 0.7em 0.5em;
-    background: white;
+    background: lighten($bgWhiteGrey, 10%);
+    border-radius: 0.3em;
+
+    &:focus {
+      border: none;
+    }
   }
 
   & textarea {
@@ -297,7 +308,7 @@ form {
   }
 
   & .form-group:nth-child(5) {
-    & p {
+    & label {
       display: block;
       width: 100%;
     }
@@ -306,6 +317,59 @@ form {
   & .form-group:last-child {
     border: none;
   }
+
+  & input[type=submit]{
+    @include style-text(4vw, bolder, $bgWhiteGrey);
+    background-color: $bgProfessionalBlue;
+    display: inline-block;
+    text-align: center;
+    padding: 0.4em 1.3em;   
+    margin-top: 1.1em;
+    margin-bottom: 5vh;
+    border: none;
+    border-radius: 0.2em;  
+    bottom:0;  
+    @include fade();
+
+    &:hover {
+      background-color: darken($bgProfessionalBlue, 10%);
+    }
+  }
+}
+
+.clickable {
+  transition: all 0.5s ease 0s;
+}
+
+.fa-envelope, .fa-phone {
+  color: $bgPersonalOrange;
+}
+
+.fa-facebook-square, .fa-instagram,
+.fa-github, .fa-linkedin-square,
+.fa-facebook-square:visited, .fa-instagram:visited,
+.fa-linkedin-square:visited, .fa-github:visited,
+.fa-facebook-square:link, .fa-instagram:link,
+.fa-linkedin-square:link, .fa-github:link {
+  text-decoration: none;
+  color: $bgProfessionalBlue;
+}
+
+.fa-facebook-square:hover, .fa-instagram:hover,
+.fa-linkedin-square:hover, .fa-github:hover {
+  text-decoration: none;
+  color: darken($bgProfessionalBlue, 10%);
+}
+
+.connect-icons {
+  margin-bottom: 5vh;
+  & a {
+    margin: 1.5vw;
+  }
+}
+
+.fa-envelope {
+  margin-bottom: 5vh;
 }
 
 /*Small Phones & tablets, landscape*/
