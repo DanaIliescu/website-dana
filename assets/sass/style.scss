@@ -81,6 +81,7 @@ body {
 
 #professional .flex-item {
     background-color: $bgProfessionalBlue;
+    border-radius: 0.2em;  
     @include fade();
 
     &:hover {
@@ -92,6 +93,7 @@ body {
 
 #personal .flex-item {
     background-color: $bgPersonalOrange;
+    border-radius: 0.2em;  
     @include fade();
 
     &:hover {
@@ -254,10 +256,10 @@ body {
 
 #contact_form {
   min-height: 100vh;
-  @include display-flex();
-  @include justify-content(center);
-  @include align-items(center);
-  @include flex-flow(column, nowrap);
+  // @include display-flex();
+  // @include justify-content(center);
+  // @include align-items(center);
+  // @include flex-flow(column, nowrap);
 
   & h3 {
     font-size: 5vw;
@@ -268,24 +270,25 @@ body {
 form {
   width: 85vw;
   font-size: 3.8vw;
+  margin: 0 auto;
 
   & label {
     display: inline-block;
     text-align: left;
     width: 24%;
     font-weight: lighter;
-
-    // color: $bgProfessionalBlue;
+    border-radius: 0.2em 0 0 0.2em;
   }
 
   & input:not([type=submit]), select {
     width: 75%;
     border: none;
+    border-radius: 0 0.2em 0.2em 0;
   }
 
   & .form-group {
     border: 1px solid black;
-    border-radius: 0.3em;
+    border-radius: 0.2em;
   }
 
   & select option {
@@ -293,30 +296,33 @@ form {
   }
 
   & label, input, select, textarea {
-    padding: 0.7em 0.5em;
+    margin: 0;
+    padding: 0.7em 0.4em;
     background: lighten($bgWhiteGrey, 10%);
-    border-radius: 0.3em;
 
     &:focus {
       border: none;
+      outline: none;
     }
   }
 
   & textarea {
     width: 100%;
     border: none;
+    border-radius: 0 0 0.2em 0.2em;
   }
 
-  & .form-group:nth-child(5) {
+  & #message_form-group {
     & label {
+      border-radius: 0.2em 0.2em 0 0;
       display: block;
       width: 100%;
     }
   }
 
-  & .form-group:last-child {
-    border: none;
-  }
+  // & .form-group:last-child {
+  //   border: none;
+  // }
 
   & input[type=submit]{
     @include style-text(4vw, bolder, $bgWhiteGrey);
@@ -419,6 +425,10 @@ form {
       & #football_img {
         height: 27vh;
       }
+
+      & p {
+        font-size: 2vw;
+      }
     }
 
     .skillset .skill-item .skill-title {
@@ -457,6 +467,35 @@ form {
       .flex-item{
         width: 98%;
       }
+    }
+
+    #contact_form {
+      & form {
+        font-size: 2vw;
+        width: 100%;
+      }
+
+      & h3 {
+        font-size: 3vw;
+        padding: 0 0.4em 0.2em;
+      }
+
+      & input[type=submit] {
+        font-size: 2.2vw;
+      }
+
+      .fa-5x {
+        font-size: 3em;
+      }
+
+      & i {
+        font-size: 2.5vw;
+      }
+
+      & .connect-icons a {
+        margin: 0.5vw;
+      }
+
     }
 }
 
