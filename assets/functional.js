@@ -73,12 +73,20 @@ function moveSection (section, insertAfterSectionIfLess, insertAfterSectionIfMor
 
   // media query change
   function WidthChange(mq) {
+    // document.getElementById("message_form-group").classList.toggle('col-sm-6');
+    // console.log("changed");
     if (mq.matches) {
       $(section).insertAfter(insertAfterSectionIfMore);
+      // document.getElementById("message_form-group").classList.add('col-sm-6');
+      // console.log("changed");
+      // document.getElementById("first_form-group").classList.add('col-sm-6');
     } else {
       // window width is less than 570px
       $(section).insertAfter(insertAfterSectionIfLess);
-  }
+      // document.getElementById("message_form-group").classList.remove('col-sm-6');
+      // console.log("changed");
+      // document.getElementById("first_form-group").classList.remove('col-sm-6');
+    }
   }
 }
 
@@ -98,8 +106,19 @@ function moveSectionTablet (section, insertAfterSectionIfLess, insertAfterSectio
     } else {
       // window width is less than 768px
       $(section).insertAfter(insertAfterSectionIfMore);
-  }
+    }
   }
 }
+
+// $(window).on('resize', function() {
+//   var win = $(this);
+//   if (win.width() > 600) {
+//       console.log("change");
+//     $('#message_form-group').addClass('col-sm-6');
+
+//   } else {
+//     $('#message_form-group').removeClass('col-sm-6');
+//   }
+// });
 
 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
